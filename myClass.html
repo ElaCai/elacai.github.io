@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>HTML Slides</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Ela Cai">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/blood.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+	 <!--有道翻译API-->
+    <div id="YOUDAO_SELECTOR_WRAPPER" style="display:none; margin:0; border:0; padding:0; width:320px; height:240px;"></div>
+    <script type="text/javascript" src="http://fanyi.youdao.com/openapi.do?keyfrom=HTMLslides&key=412142669&type=selector&version=1.2&translate=on"
+    charset="utf-8"></script>
+    <!--有道翻译API-->
+    
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section id="1">
+					<h3>My Kiosk Step by Step</h3>
+					一步步制作炫酷展厅
+					<p>
+					The HTML Responsive Presentation Framework
+					<small>Created by <a href="#">Ela Cai</a> / <a href="http://twitter.com/elacai">@elacai</a></small>
+					</p>
+				</section>
+				
+				<section data-external="https://lmbcblog.mybluemix.net/project-example-video1.html"> </section>
+				
+				<section  id="2" data-transition="convex" data-markdown>
+					<script type="text/template">
+						Trick #1:Slides Autoplay
+					    幻灯片自动播放
+                        Adjust Reveal.initialize() attributes. 
+						
+						```
+						<section data-markdown>
+						  ## Markdown support
+
+						 Reveal.initialize({
+ 				      	controls: false, //hide the controls 
+				      	progress: false, //hide the progress bar
+				      	history: false,  //hide history
+			          	autoSlide: 5000,    // advance automatically after 5000 ms 
+			          	shuffle: true,  //Randomize the slides 
+		              	slideNumber: false //hide the slide numbers
+				      })
+					</section>
+						```
+					</script>
+				</section>
+
+           <section id="3" data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">	
+					<h3>Trick #2:Slides Overview </h3>
+					幻灯片概要
+					<p>
+						Press <strong>ESC</strong> to enter the slide overview.
+					</p>
+				</section>
+					
+				<section id="4" data-background="https://thumbnail0.baidupcs.com/thumbnail/e677a80ec2d2861072040532f08c9995?fid=395756239-250528-1056195885964997&time=1493550000&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-Y2iREQqUzz4h%2Bmuh6vbBn5npJng%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=2778864986910343116&dp-callid=0&size=c710_u400&quality=100" >	
+				<h3>Trick #3:Dynamic Backgrounds </h3>
+						使用在线画册做背景
+						<p>
+							Use picture stored on the cloud disk.用云盘中的图片做背景
+						</p>
+						<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png"&gt;</code></pre>
+				</section>
+					
+				<section id="5" data-background="https://thumbnail0.baidupcs.com/thumbnail/849fb338f219081ef6c48366ca89f901?fid=395756239-250528-13494649779956&time=1493528400&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-EMOf52nnvF4rO3o%2BAQJjCV4amgs%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=2773390871722588369&dp-callid=0&size=c710_u400&quality=100" data-background-repeat="repeat" data-background-size="100px">
+						<h3>Trick #4:Picture Grid </h3>
+						图片网格
+						<p>
+							Background repeat.重复图片背景
+						</p>
+						<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
+					</section>
+					
+					<section id="6" data-background-video="http://v.youku.com/v_show/id_XMjUyMTE2NjYyOA==.html？firsttime=0">
+							<h3>Trick #5:Video Backgrounds</h3>
+							视频背景
+							<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4"&gt;</code></pre>
+					</section>
+					
+					<section id="7" >
+					<h3>Trip #6: Use frame to embed a video</h3>
+					在框架内插入视频
+					<p>
+					<iframe data-autoplay width="800" height="600" src="http://v.youku.com/v_show/id_XMTg0NTk3OTE3Ng==.html?firsttime=0"></iframe>
+				    </p>
+				    </section>
+					
+					<section id="8" data-background="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1493540354823&di=17fa185e0c4892868f1afe71dd2c943f&imgtype=0&src=http%3A%2F%2Fpic.92to.com%2Fanv%2F201601%2F06%2Fmzm35yic242.gif">
+						<h3>Trick #7:GIF</h3>
+						使用动图背景
+					</section>
+
+				<section id="9" data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
+					<h3>Trick #8:Default Background Transitions</h3>
+					背景切换动画
+					<p>
+						Config background transitions via the backgroundTransition option. This one's called "zoom".
+					</p>
+					<pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
+				</section>
+
+				<section id="10">
+					<h3>Trick #9： Direct Jump</h3>
+					页面跳转
+					<p>
+						Page Number followed by enter to jump to a certain slide.
+	                    Have a try. Type 5 followed by enter. Then type 10 followed by enter to come back.
+					</p>
+				</section>
+				
+				<section id="11">
+					<h3>Trick #10:Speaker View</h3>
+					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
+					<p>Press the <em>S</em> key to try it out.</p>
+
+					<aside class="notes">
+						You can put your speaker notes here. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+
+				
+				<section id="12">
+					<h3>Trick #11:Black out the slides</h3>
+					黑屏休息一下
+					<p>
+						Press the <em>B</em> key or . to pause the presentation.
+					</p>
+				</section>
+
+				<section id="13" style="text-align: center;">
+					<h2>THE END</h2>
+					<p>Click"next" to navigate to first page.
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true, //hide the control
+				progress: true, //hide the progress bar
+				history: false, //hide the history
+			    autoSlide: 5000,    // advance automatically after 5000 ms
+			    shuffle: false,  //Randomize the slides set to false
+				center: true,			 
+				slideNumber: true, //show slide number
+				loop:true,         //loop the slides
+				autoPlayMedia: false,
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/jump/jump.js', async: true},
+					{ src: 'plugin/external/external.js', condition: function() { return !!document.querySelector( '[data-external]' ); } },
+
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

@@ -4,14 +4,9 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>HTMLSlides Demos</title>
-
+		<title>White and Black</title>
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
-
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-
+		<link rel="stylesheet" href="css/theme/white.css" id="white-theme">
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -20,38 +15,36 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+		
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>
-				<h3>
-				App #1 Kiosk
-				</h3>
-				<p>Slides Autoplay <a href="myKiosk.html">Demo File</a>. Transition slides every 5000ms.</p>
+				<section class="white-theme" id="s1">
+				<h1>Default theme is white</h1>
+				<p>Page 1</p>
 				</section>
 				
-				<section>
-				<h3>
-				App #2 Story Teller
-				</h3>
-				<p>Text to speech <a href="jokeTeller.html">Demo File</a>. Read out English on the page.</p>
+				<section  class="white-theme" id="s2">
+				<script>
+     			document.getElementById("s2").style.background = "green";
+				</script>
+				<h1>Default theme is white</h1>
+				Override section background to green
+				<p id="p2">Page 2: Override paragrap2 color to red</p>	
+				<script>
+     			document.getElementById("p2").style.color = "red";
+				</script>
 				</section>
 				
-				<section>
-				<h3>
-				App #3 Classroom
-				</h3>
-				<p>Features to facilitate a class <a href="myClass.html">Demo File</a>. </p>
+				<section  class="black-theme" id="s3">	
+				<script>
+				document.getElementById("s3").className="css/theme/black.css";//css样式名称
+				</script>
+	     		<h1>Last page theme is black</h1>
+				<p>Use black.css instead</p>	
 				</section>
 				
-				<section>
-				<h3>
-				App #4 Multiple themes
-				</h3>
-				<p>Override styles <a href="whiteandblack.html">Demo File</a>. </p>
-				</section>		
-
 			</div>
 		</div>
 
@@ -62,14 +55,19 @@
 			// More info about config & dependencies:
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
+			Reveal.initialize({			 
+				slideNumber: true, //show slide number
+<!--
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
+			
+					]
+			-->
 			});
+			
 		</script>
 	</body>
 </html>
